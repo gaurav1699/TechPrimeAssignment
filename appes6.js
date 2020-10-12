@@ -89,12 +89,13 @@ class Product {
   
       localStorage.setItem('products', JSON.stringify(products));
     }
-  
-    static removeproduct(isbn) {
+      
+      
+  static removeproduct(quantity) {    
       const products = Store.getproducts();
-  
       products.forEach(function(product, index){
-       if(product.isbn === isbn) {
+        
+       if(product.quantity === quantity) {
         products.splice(index, 1);
        }
       });
